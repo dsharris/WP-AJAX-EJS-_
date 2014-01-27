@@ -1,0 +1,112 @@
+/** DEFAULTS GLOBAL
+===================================*/
+
+//----------------------------------*\
+// HELPERS
+//----------------------------------
+
+// Box Sizing
+*, *:before, *:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+// hide tap on touch
+* {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+// clear Function
+.cf {
+	zoom: 1;
+	&:before,
+	&:after {
+		content: "";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+//----------------------------------*\
+// GENERAL
+//----------------------------------
+
+body {
+	background: #FFF;
+	font-size: 16px;
+	color: #000;
+}
+
+a {
+	color: $color-href;
+	text-decoration: none;
+	&:hover {
+		color: $color-href-hover;
+	}
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+hr {
+	margin: 1em 0;
+	border: 0;
+	border-bottom: 1px solid #a4abba;
+}
+
+//----------------------------------*\
+// HEADLINES
+//----------------------------------
+
+h1, h2, h3, h4, h5, h6 {
+	position: relative;
+	line-height: $headline-line-height;
+	margin-bottom: $headline-bottom-margin;
+	a {
+		color: $color-href;
+	}
+}
+
+//----------------------------------*\
+// TEXT COMPONENTS
+//----------------------------------
+
+p {
+	font-size: 1em;
+	line-height: 1.5em;
+	margin-bottom: $paragraph-bottom-margin;
+}
+
+i, em {
+	font-style: italic;
+}
+
+b, strong {
+	font-weight: bold;
+}
+
+//----------------------------------*\
+// LIST STYLES
+//----------------------------------
+
+ul, ol, dd {
+	line-height: 1.5em;
+}
+
+ul, ol {
+	margin-bottom: 1.625em;
+	padding-left: 20px;
+}
+
+li {
+	font-size: inherit;
+	line-height: 1.5em;
+}
+
+ol {list-style-type: decimal;}
+ul {list-style-type: disc;}
