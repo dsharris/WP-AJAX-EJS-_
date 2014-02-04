@@ -14,7 +14,6 @@
 		<link rel="stylesheet" href="<?php bloginfo('template_directory') ?>/style.css" type="text/css" media="screen" />
 	<!--<![endif]-->
 
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<!--[if lt IE 9]><script src="<?php bloginfo('template_directory') ?>/assets/scripts/vendor/html5shiv.js"></script><![endif]-->
 	<?php wp_head();?>
 </head>
