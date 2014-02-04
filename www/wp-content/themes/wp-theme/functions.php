@@ -1,5 +1,4 @@
 <?php
-// error_reporting(E_ERROR | E_PARSE);
 
 // HIDE ADMIN BAR ALWAYS
 //add_filter( 'show_admin_bar', '__return_false' );
@@ -10,7 +9,7 @@ function no_wp_jquery(){
 }
 
 
-//CLEAN UP WP HEAD
+// CLEAN UP WP HEAD
 remove_action('wp_head', 'rsd_link');
 remove_action('wp_head', 'wlwmanifest_link');
 remove_action('wp_head', 'wp_generator');
@@ -30,7 +29,7 @@ if ( function_exists( 'add_image_size' ) ) {
 }
 
 
-// REQUIRED FILES
+// CUSTOM FILES
 include_once('functions/custom_post_types.php');
 include_once('functions/custom_taxonomies.php');
 include_once('functions/custom_sidebars.php');
@@ -40,6 +39,9 @@ include_once('functions/wordpress/utility.php');
 
 // Add CPT icons as well as seperators to the admin menu
 include_once('functions/wordpress/admin-menu.php');
+
+// ENVIRONMENT STUFF
+include_once('functions/environment.php');
 
 
 
