@@ -47,3 +47,10 @@ Feel free to check the PHP constant **ENVIRONMENT** when debugging something. Ex
 	?>
 
 Note that TimThumb is configured to store its cache files in */wp-content/timthumb-cache*. As a general rule, don't put cache files from PHP or your theme in the theme folder; create on inside of the */wp-content* directory.
+
+
+Troubleshooting
+------------------
+**What if I need to put jQuery in the header?**
+
+You'll need to adjust the way require.js is setup. In short, move require's script tag into the head before the jQuery script tag. Instead of using the data-main attribute to kick it off, you'll kick it off manually in the footer. See [this StackOverflow thread](http://stackoverflow.com/questions/14018213/requirejs-working-with-2-jquery-libs) for an example.

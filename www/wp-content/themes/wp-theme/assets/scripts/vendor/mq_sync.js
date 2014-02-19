@@ -1,4 +1,4 @@
-define( function (){
+define( ['jquery'], function (){
 
 	// fix indexof on ie8
 	if (!Array.prototype.indexOf)
