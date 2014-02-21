@@ -1,6 +1,6 @@
 define({
 
-	// RequireJS
+	// RequireJS config object
 	requirejs: {
 		paths: {
 			jquery: [
@@ -16,13 +16,16 @@ define({
 		}
 	},
 
-	// jQuery selectors that include listed files when found on current page
-	selectors: [
-		/*
-		{
-			selector: 'body.someClass',
-			files: ['vendor/fastclick']
-		}
-		*/
-	]
+	/*
+	jQuery selectors that include listed files when found on current page
+	Prepending a ! in front of the name will make sure the file is not included
+	when that selector is found.
+
+	Example:
+		'body.anotherTemplate': ['this_one', '!not_this_one']
+	*/
+	selectors: {
+		
+	}
+
 });
