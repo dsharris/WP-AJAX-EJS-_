@@ -8,10 +8,10 @@
     <link rel="icon" type="image/ico" href="<?php bloginfo('template_directory') ?>/assets/images/favicon.ico" />
 	<title><?php wp_title('&raquo;','true','right'); ?> <?php bloginfo('name') ?></title>
 	<!--[if IE 8]>
-		<link rel="stylesheet" href="<?php bloginfo('template_directory') ?>/ie.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="<?php bloginfo('template_directory') ?>/ie.css" />
 	<![endif]-->
 	<!--[if !(IE 8) ]><!-->
-		<link rel="stylesheet" href="<?php bloginfo('template_directory') ?>/style.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="<?php bloginfo('template_directory') ?>/style.css" />
 	<!--<![endif]-->
 
 	<!--[if lt IE 9]><script src="<?php bloginfo('template_directory') ?>/assets/scripts/vendor/html5shiv.js"></script><![endif]-->
