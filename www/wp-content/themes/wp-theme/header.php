@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/ico" href="<?php bloginfo('template_directory') ?>/assets/images/favicon.ico" />
-	<title><?php wp_title('&raquo;','true','right'); ?> <?php bloginfo('name') ?></title>
+	<title><?php wp_title('&raquo;','true','right'); ?></title>
 	<!--[if IE 8]>
 		<link rel="stylesheet" href="<?php bloginfo('template_directory') ?>/ie.css" />
 	<![endif]-->
@@ -14,7 +14,19 @@
 		<link rel="stylesheet" href="<?php bloginfo('template_directory') ?>/style.css" />
 	<!--<![endif]-->
 
-	<!--[if lt IE 9]><script src="<?php bloginfo('template_directory') ?>/assets/scripts/vendor/html5shiv.js"></script><![endif]-->
+	<!--[if lt IE 9]>
+		<script src="<?php bloginfo('template_directory') ?>/assets/scripts/vendor/html5shiv.js"></script>
+	<![endif]-->
+
+	<script>
+		// Place Google Analytics code here
+		window.config = window.config || {};
+		window.config = "<?php bloginfo('url')?>";
+		// Empty default Gravity Forms spinner function
+		var gformInitSpinner = function(){};
+	</script>
+
 	<?php wp_head();?>
+
 </head>
 <body <?php body_class(); ?>  id="<?php echo get_template_name(); ?>">
