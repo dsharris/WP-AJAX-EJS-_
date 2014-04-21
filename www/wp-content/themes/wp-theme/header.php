@@ -5,8 +5,12 @@
 <head profile="http://gmpg.org/xfn/11">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
     <link rel="icon" type="image/ico" href="<?php bloginfo('template_directory') ?>/assets/images/favicon.ico" />
+	
 	<title><?php wp_title('&raquo;','true','right'); ?></title>
+	
 	<!--[if IE 8]>
 		<link rel="stylesheet" href="<?php bloginfo('template_directory') ?>/ie.css" />
 	<![endif]-->
