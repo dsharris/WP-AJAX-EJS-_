@@ -12,6 +12,7 @@ Setup Instructions
 6. When setting up your WP installation, DO NOT USE 'admin' AS THE DEFAULT USERNAME.
 7. Activate WP Migrate DB Pro using our license: `cb20fe1d-8e53-4c9c-a460-9a83b0ff2f88`
 8. Activate Gravity Forms with our license: `882ec6346d4cbf91ff13565dea0d500c`
+9. Once the PM gets you the API key in BugHerd, place it in the footer's script tag.
 
 
 Structure
