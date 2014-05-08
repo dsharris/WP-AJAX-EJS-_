@@ -55,6 +55,6 @@ if(file_exists( ABSPATH . 'wp-config.local' ) ){
 
 }else{
 
-	die( "Your config isn't set up right." );
+	die('<img src="http://31.media.tumblr.com/tumblr_lq6p4gHAHa1qmlozzo1_400.gif" style="display: block;margin-bottom: 10px">Your config isn\'t set up right.');
 
 }
