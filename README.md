@@ -7,11 +7,11 @@ Setup Instructions
 1. Rename *wp-config-sample.local* to *wp-config.local*. Treat it like you typically would *wp-config.php*.
 2. Consider renaming the theme directory to something related to the client (instead of "*wp-theme*").
 3. Choose between SASS or SCSS when setting up your environment.
-4. Don't forget to update *<theme directory>/sass/style.sass* with the theme info like you usually would.
+4. Don't forget to update *<theme directory>/assets/sass/style.sass* with the theme info like you usually would.
 5. SASS/Compass is configured in the theme's directory, so you can `compass watch` from there.
 6. When setting up your WP installation, DO NOT USE 'admin' AS THE DEFAULT USERNAME.
-7. Activate WP Migrate DB Pro using our license: `cb20fe1d-8e53-4c9c-a460-9a83b0ff2f88`
-8. Activate Gravity Forms with our license: `882ec6346d4cbf91ff13565dea0d500c`
+7. Activate WP Migrate DB Pro using our license (LastPass: Shared-40Digits Misc -> WP Migrate DB Pro)
+8. Activate Gravity Forms with our license (LastPass: Shared-40Digits Misc -> Gravity Forms dev license)
 9. Once the PM gets you the API key in BugHerd, place it in the footer's script tag.
 
 
@@ -22,7 +22,7 @@ Structure
 3. **/functions/** -- Anything functions related goes in here. Anything wordpress, goes into the /functions/wordpress/ folder. If you're adding a plugin or larger function, add it as its own file. Then pull the file inside functions.php. Look at lines 41-42 for an example of how to. Add comments to your inclusion so we know what the function does. Keep any and all unnecessary code out of functions.php.
 4. **/functions/wordpress/utility.php** -- Keep any utility function scripts in here with comments. Some examples would be of custom slugs, ACF option pages...etc
 5. **/functions/custom_*** -- Keep these 3 files clean and well commented. Do not add any additional files into this directory unless it doesn't fit anywhere else.
-6. **/functions/wordpress/admin-menu.php** -- Lets you add separator between the wordpress menu. More promenant and allows for better organization. Also enques the custom post type style icons. Look at number 7.
+6. **/functions/wordpress/admin-menu.php** -- Lets you add separator between the wordpress menu. More prominent and allows for better organization. Also enques the custom post type style icons. Look at number 7.
 7. **/assets/sass/style-cpt.scss** -- You can assign custom font icons to your Custom Post Types through an icon font.
 
 
