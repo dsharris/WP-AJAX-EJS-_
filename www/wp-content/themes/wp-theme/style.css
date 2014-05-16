@@ -1,5 +1,5 @@
 @import url("http://fonts.googleapis.com/css?family=Averia+Serif+Libre:300,400,700,400italic");
-/* 	Theme Name: The Site Name
+/*! 	Theme Name: The Site Name
 	Theme URL: http://www.siteurl.com
 	Description: Site description
 	Author: 40Digits
@@ -71,6 +71,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
+/** VARIABLES
+===================================*/
+/** COLORS
+===================================*/
 /** THIRD-PARTY FONTS
 ===================================*/
 /** UTILITIES
