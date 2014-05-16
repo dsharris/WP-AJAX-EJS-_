@@ -24,7 +24,12 @@
 
 	<script>
 		// Place Google Analytics code here
-		window.config = "<?php bloginfo('url')?>";
+
+		// Set up site configuration
+		window.config = window.config || {};
+
+		// The base URL for the WordPress theme
+		window.config.baseUrl = "<?php bloginfo('url')?>";
 
 		// Empty default Gravity Forms spinner function
 		var gformInitSpinner = function() {};
