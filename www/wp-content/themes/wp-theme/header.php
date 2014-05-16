@@ -24,10 +24,10 @@
 
 	<script>
 		// Place Google Analytics code here
-		window.config = window.config || {};
 		window.config = "<?php bloginfo('url')?>";
+
 		// Empty default Gravity Forms spinner function
-		var gformInitSpinner = function(){};
+		var gformInitSpinner = function() {};
 	</script>
 
 	<?php wp_head();?>
