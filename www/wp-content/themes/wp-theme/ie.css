@@ -329,102 +329,72 @@ ul {
 
 /** JS BREAKPOINS
 ===================================*/
-@media screen and (min-width: 30em) {
-  /* line 13, assets/sass/modules/_js-breakpoints.scss */
-  head {
-    font-family: "mq-min-small";
-  }
-
-  /* line 14, assets/sass/modules/_js-breakpoints.scss */
-  body:after {
-    content: "mq-min-small";
-    display: none;
-  }
+/* line 23, assets/sass/modules/_js-breakpoints.scss */
+head {
+  font-family: "mq-min-medium";
 }
-@media screen and (min-width: 37.5em) {
-  /* line 18, assets/sass/modules/_js-breakpoints.scss */
-  head {
-    font-family: "mq-min-netbook";
-  }
 
-  /* line 19, assets/sass/modules/_js-breakpoints.scss */
-  body:after {
-    content: "mq-min-netbook";
-    display: none;
-  }
+/* line 24, assets/sass/modules/_js-breakpoints.scss */
+body:after {
+  content: "mq-min-medium";
+  display: none;
 }
-@media screen and (min-width: 48em) {
-  /* line 23, assets/sass/modules/_js-breakpoints.scss */
-  head {
-    font-family: "mq-min-medium";
-  }
 
-  /* line 24, assets/sass/modules/_js-breakpoints.scss */
-  body:after {
-    content: "mq-min-medium";
-    display: none;
-  }
+/* line 28, assets/sass/modules/_js-breakpoints.scss */
+head {
+  font-family: "mq-min-large";
 }
-@media screen and (min-width: 60em) {
-  /* line 28, assets/sass/modules/_js-breakpoints.scss */
-  head {
-    font-family: "mq-min-large";
-  }
 
-  /* line 29, assets/sass/modules/_js-breakpoints.scss */
-  body:after {
-    content: "mq-min-large";
-    display: none;
-  }
+/* line 29, assets/sass/modules/_js-breakpoints.scss */
+body:after {
+  content: "mq-min-large";
+  display: none;
 }
-@media screen and (min-width: 90em) {
-  /* line 33, assets/sass/modules/_js-breakpoints.scss */
-  head {
-    font-family: "mq-min-xlarge";
-  }
 
-  /* line 34, assets/sass/modules/_js-breakpoints.scss */
-  body:after {
-    content: "mq-min-xlarge";
-    display: none;
-  }
+/* line 33, assets/sass/modules/_js-breakpoints.scss */
+head {
+  font-family: "mq-min-xlarge";
 }
-@media screen and (max-width: 29.9375em) {
-  /* line 39, assets/sass/modules/_js-breakpoints.scss */
-  head {
-    font-family: "mq-tiny";
-  }
 
-  /* line 40, assets/sass/modules/_js-breakpoints.scss */
-  body:after {
-    content: "mq-tiny";
-    display: none;
-  }
+/* line 34, assets/sass/modules/_js-breakpoints.scss */
+body:after {
+  content: "mq-min-xlarge";
+  display: none;
 }
-@media screen and (min-device-width: 48em) and (max-device-width: 59.9375em) and (orientation: portrait) {
-  /* line 45, assets/sass/modules/_js-breakpoints.scss */
-  head {
-    font-family: "mq-portrait";
-  }
 
-  /* line 46, assets/sass/modules/_js-breakpoints.scss */
-  body:after {
-    content: "mq-portrait";
-    display: none;
-  }
+/* line 39, assets/sass/modules/_js-breakpoints.scss */
+head {
+  font-family: "mq-tiny";
 }
-@media screen and (min-device-width: 48em) and (max-device-width: 80em) and (orientation: landscape) {
-  /* line 51, assets/sass/modules/_js-breakpoints.scss */
-  head {
-    font-family: "mq-landscape";
-  }
 
-  /* line 52, assets/sass/modules/_js-breakpoints.scss */
-  body:after {
-    content: "mq-landscape";
-    display: none;
-  }
+/* line 40, assets/sass/modules/_js-breakpoints.scss */
+body:after {
+  content: "mq-tiny";
+  display: none;
 }
+
+/* line 45, assets/sass/modules/_js-breakpoints.scss */
+head {
+  font-family: "mq-portrait";
+}
+
+/* line 46, assets/sass/modules/_js-breakpoints.scss */
+body:after {
+  content: "mq-portrait";
+  display: none;
+}
+
+/* line 51, assets/sass/modules/_js-breakpoints.scss */
+head {
+  font-family: "mq-landscape";
+}
+
+/* line 52, assets/sass/modules/_js-breakpoints.scss */
+body:after {
+  content: "mq-landscape";
+  display: none;
+}
+
 /** WORDPRESS DEFAULT
 ===================================*/
 /* line 6, assets/sass/modules/_wordpress-default.scss */
@@ -443,58 +413,16 @@ div.aligncenter {
 .alignright {
   float: none;
 }
-@media screen and (min-width: 30em) {
-  /* line 16, assets/sass/modules/_wordpress-default.scss */
-  .alignright {
-    float: right;
-    margin: 5px 0 20px 20px;
-  }
-}
 
 /* line 24, assets/sass/modules/_wordpress-default.scss */
 .alignleft {
   float: none;
-}
-@media screen and (min-width: 30em) {
-  /* line 24, assets/sass/modules/_wordpress-default.scss */
-  .alignleft {
-    float: left;
-    margin: 5px 20px 20px 0;
-  }
 }
 
 /* line 32, assets/sass/modules/_wordpress-default.scss */
 .aligncenter {
   display: block;
   margin: 5px auto 5px auto;
-}
-
-@media screen and (min-width: 30em) {
-  /* line 37, assets/sass/modules/_wordpress-default.scss */
-  a img.alignright {
-    width: auto;
-    padding: 3px 5px 0;
-    float: right;
-    margin: 5px 0 20px 20px;
-  }
-}
-
-@media screen and (min-width: 30em) {
-  /* line 46, assets/sass/modules/_wordpress-default.scss */
-  a img.alignnone {
-    width: auto;
-    margin: 5px 20px 20px 0;
-  }
-}
-
-@media screen and (min-width: 30em) {
-  /* line 53, assets/sass/modules/_wordpress-default.scss */
-  a img.alignleft {
-    width: auto;
-    padding: 3px 5px 0;
-    float: left;
-    margin: 5px 20px 20px 0;
-  }
 }
 
 /* line 62, assets/sass/modules/_wordpress-default.scss */
@@ -505,27 +433,6 @@ a img.aligncenter {
   margin-right: auto;
 }
 
-@media screen and (min-width: 30em) {
-  /* line 70, assets/sass/modules/_wordpress-default.scss */
-  .wp-caption.alignnone {
-    margin: 5px 20px 20px 0;
-  }
-}
-
-@media screen and (min-width: 30em) {
-  /* line 76, assets/sass/modules/_wordpress-default.scss */
-  .wp-caption.alignleft {
-    margin: 5px 20px 15px 0;
-  }
-}
-
-@media screen and (min-width: 30em) {
-  /* line 82, assets/sass/modules/_wordpress-default.scss */
-  .wp-caption.alignright {
-    margin: 5px 0 20px 20px;
-  }
-}
-
 /* line 88, assets/sass/modules/_wordpress-default.scss */
 .wp-caption {
   width: 100% !important;
@@ -533,19 +440,7 @@ a img.aligncenter {
   padding: 0;
   text-align: left;
   margin-bottom: 20px;
-}
-@media screen and (min-width: 30em) {
-  /* line 88, assets/sass/modules/_wordpress-default.scss */
-  .wp-caption {
-    width: 250px !important;
-    margin-bottom: 0;
-  }
-}
-@media screen and (min-width: 48em) {
-  /* line 88, assets/sass/modules/_wordpress-default.scss */
-  .wp-caption {
-    width: 320px !important;
-  }
+  width: 320px !important;
 }
 
 /* line 103, assets/sass/modules/_wordpress-default.scss */
