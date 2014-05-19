@@ -2,8 +2,7 @@
 ===================================*/
 
 // List all of the colors used in this site
-// All color variables should begin with $color-
+// All color variables should begin with $color- and should be named after the color rather than their function (e.g. $color-orange vs $color-header-background)
 
-$color-name:          #000000;
-$color-href:          #454545;
-$color-href-hover:        #454545;
+$color-href:          			#454545;
+$color-href-hover:				#454545;
