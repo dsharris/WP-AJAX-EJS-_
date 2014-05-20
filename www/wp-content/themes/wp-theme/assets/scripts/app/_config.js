@@ -3,15 +3,12 @@ define({
 	// RequireJS config object
 	requirejs: {
 		paths: {
-			jquery: [
-				'//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min',
-				'vendor/jquery-1.11.0.min'
-			]
+
 		},
 		// for non-AMD scripts
 		shim: {
 			/*
-			someJqueryPlugin: ['jquery']
+			someJqueryPlugin: ['namehere']
 			*/
 		}
 	},
@@ -25,7 +22,7 @@ define({
 		'body.anotherTemplate': ['this_one', '!not_this_one']
 	*/
 	selectors: {
-		
+
 	}
 
 });
