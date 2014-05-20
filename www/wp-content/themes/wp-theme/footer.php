@@ -1,4 +1,5 @@
 
+	<?php wp_footer(); ?>
 	<script data-main="<?php bloginfo('template_directory') ?>/assets/scripts/main.js" src="<?php bloginfo('template_directory') ?>/assets/scripts/vendor/require.js"></script>
 	<?php if(ENVIRONMENT == 'staging' || ENVIRONMENT == 'testing'){ ?>
 		<script type='text/javascript'>
@@ -11,6 +12,5 @@
 			})(document, 'script');
 		</script>
 	<?php } ?>
-	<?php wp_footer() ?>
 </body>
 </html>

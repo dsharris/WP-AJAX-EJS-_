@@ -3,9 +3,12 @@
 // HIDE ADMIN BAR ALWAYS
 //add_filter( 'show_admin_bar', '__return_false' );
 
+// REMOVE DEFAULT JQUERY & LOAD GOOGLE IN FOOTER
 add_action( 'wp_enqueue_scripts', 'no_wp_jquery' );
 function no_wp_jquery(){
 	wp_deregister_script('jquery');
+	wp_register_script('jquery', ('//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'), false, '1.11.0', true);
+	wp_enqueue_script('jquery');
 }
 
 
