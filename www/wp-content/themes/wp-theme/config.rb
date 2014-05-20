@@ -25,3 +25,6 @@ output_style = (environment == :production) ? :compressed : :expanded
 
 # FTW = sass globbing. So good.
 # require 'sass-globbing'
+
+# Generate sourcemaps with our compiled CSS
+sass_options = {:sourcemap => true}
