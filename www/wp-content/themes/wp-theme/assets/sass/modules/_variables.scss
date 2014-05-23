@@ -8,6 +8,11 @@
   @return $px / $context + 0em;
 }
 
+// colors - start all colors with $color
+$color-name:                    #000000;
+$color-href:                    #454545;
+$color-href-hover:              #454545;
+
 // structure
 $gutter: 						em(10);
 $gutter-large:					em(20);
