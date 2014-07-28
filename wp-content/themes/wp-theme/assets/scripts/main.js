@@ -3,7 +3,7 @@ define( ['app/_config'], function(config){
 	// config dat mug.
 	requirejs.config(config.requirejs);
 
-	require( function(){
+	require([], function(){
 		var toRequire = [],
 			toIgnore = [];
 
