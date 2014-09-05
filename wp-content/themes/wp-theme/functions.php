@@ -32,6 +32,12 @@ if ( function_exists( 'add_image_size' ) ) {
 }
 
 
+// include all ajax scripts
+foreach (glob(realpath(dirname(__FILE__)) . "/functions/wordpress/ajax/*.php") as $filename){
+    include_once($filename);
+}
+
+
 // CUSTOM FILES
 include_once('functions/custom_post_types.php');
 include_once('functions/custom_taxonomies.php');

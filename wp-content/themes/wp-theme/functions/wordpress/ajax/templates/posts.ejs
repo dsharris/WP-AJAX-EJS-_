@@ -1,0 +1,17 @@
+<% _.each(posts, function (post) { %>
+
+    <article>
+
+        <h3> <%= post.title %> </h3>
+
+        <span> <%= new Date(post.date).toString() %> </span>
+
+        <br />
+        <br />
+
+        <p>
+            <%= post.content %>
+        </p>
+    </article>
+
+<% }) %>
