@@ -40,18 +40,17 @@ if(!Object.keys){Object.keys=function(){"use strict";var e=Object.prototype.hasO
                         url : [window.location.protocol, '', window.location.host, 'wp-admin', 'admin-ajax.php'].join('/'),
                         page: 0
                     },
-                    template, requesting,
+                    blog_page   =   2,
+                    total       =   500, // start off with a large number of total pages until we get the real number back
+                    $win        =   $(window),
+                    requesting, 
 
                     makeRequest = function (slug) {
                         var data = {
                             action: options.action,
-                            template: !!template,
-                            slug : slug
+                            template: options.template,
+                            pageNum : pageNum
                         };
-
-                        options.page = options.page + 1
-
-                        data.page = options.page;
 
                         $.ajax({
                             url: options.url,
@@ -63,40 +62,55 @@ if(!Object.keys){Object.keys=function(){"use strict";var e=Object.prototype.hasO
 
                     requestComplete = function (data) {
 
+                        total = data.total;
+
                         if (data.template) {
                             template = data.template;
                         }
 
-                        $section.append( _.template( template, {
-                            posts : data
-                        }));
+                        var compiled = _.template( template );
+
+                        $section.append( $(compiled({data:data})).hide().fadeIn() );
 
                         window.setTimeout(function () {
                             requesting = false;
-                        }, 200);
-                    },
-
-                    ajaxLink = function (e) {
-                        var $link = $(e.target);
-
-                        e.preventDefualt();
-
-                        makeRequest($link.attr('href').slice(1));
+                        }, 500);
+                        
                     },
 
                     init = function () {
-                        var $win = $(window);
+
+                        var $win        =   $(window),
+                            end_zone    =   $('footer').offset().top - $win.height();
+
                         options = _.extend({}, options, $section.data());
 
-                        $('a.ajax').click(ajaxLink);
+                        $win.scroll(function(){
+
+                            if( !requesting && end_zone < $win.scrollTop() ) {
+
+                                if (blog_page > total){
+
+                                    return false;
+
+                                } else {
+
+                                    requesting = true;
+
+                                    makeRequest(blog_page);
+
+                                    ++blog_page;
+
+                                }
+
+                            }
+
+                        });
+
                     };
 
                 init();
             });
-
-
-<a class="ajax" href="#about">About</a>
-
 
         },
 

@@ -5,6 +5,6 @@
 ?>
 
 
-<section class="infinite-scroll" data-action="load_more_posts"></section>
+<section class="infinite-scroll" data-action="load_more_posts" data-template="posts.ejs"></section>
 
 <?php get_footer(); ?>
