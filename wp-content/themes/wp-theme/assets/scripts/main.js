@@ -48,7 +48,7 @@ if(!Object.keys){Object.keys=function(){"use strict";var e=Object.prototype.hasO
             total = 500,
             $win = $(window),
             requesting, 
-            end_zone = get_end_zone(),
+            end_zone,
             get_end_zone = function() {
               return $('.main-footer').offset().top - $win.height();
             },
@@ -86,6 +86,8 @@ if(!Object.keys){Object.keys=function(){"use strict";var e=Object.prototype.hasO
             init = function () {
 
               options = _.extend({}, options, $section.data());
+
+              end_zone = get_end_zone();
 
               $win.scroll(function() {
 
