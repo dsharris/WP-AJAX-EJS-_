@@ -33,84 +33,80 @@ if(!Object.keys){Object.keys=function(){"use strict";var e=Object.prototype.hasO
         },
 
         infiniteScroll = function () {
-            var $section = this;
-            
-            plugins('momentjs', 'underscoreJs', function () {
-                var options = {
-                        url : [window.location.protocol, '', window.location.host, 'wp-admin', 'admin-ajax.php'].join('/'),
-                        page: 0
-                    },
-                    blog_page   =   2,
-                    total       =   500, // start off with a large number of total pages until we get the real number back
-                    $win        =   $(window),
-                    requesting, 
+          var $section = this;
 
-                    makeRequest = function (slug) {
-                        var data = {
-                            action: options.action,
-                            template: options.template,
-                            pageNum : pageNum
-                        };
+          plugins('momentjs', 'underscoreJs', function () {
+            var options = {
+                url : [window.location.protocol,'', window.location.host,window.location.pathname, 'wp-admin', 'admin-ajax.php'].join('/'),
+                page: 0
+              },
+              pageNum = 2,
+              // start off with a large number of total pages until we get the real number back
+              total = 500,
+              $win = $(window),
+              requesting, 
+              get_end_zone = function() {
+                return $('.main-footer').offset().top - $win.height();
+              },
+              end_zone = get_end_zone(),
+              makeRequest = function (slug) {
+                var data = {
+                  action: options.action,
+                  template: options.template,
+                  pageNum : pageNum
+                };
 
-                        $.ajax({
-                            url: options.url,
-                            type: 'POST',
-                            dataType: 'JSON',
-                            data: data,
-                        }).done(requestComplete);
-                    },
+                $.ajax({
+                  url: options.url,
+                  type: 'POST',
+                  dataType: 'JSON',
+                  data: data,
+                }).done(requestComplete);
+              },
 
-                    requestComplete = function (data) {
+              requestComplete = function (data) {
 
-                        total = data.total;
+                var compiled = _.template( data.template );
 
-                        if (data.template) {
-                            template = data.template;
-                        }
+                total = data.total;
 
-                        var compiled = _.template( template );
+                $section.append($(compiled({posts:data.posts})).hide().fadeIn() );
 
-                        $section.append( $(compiled({data:data})).hide().fadeIn() );
+                end_zone = get_end_zone();
 
-                        window.setTimeout(function () {
-                            requesting = false;
-                        }, 500);
-                        
-                    },
+                window.setTimeout(function () {
+                    requesting = false;
+                }, 500);
+                  
+              },
 
-                    init = function () {
+              init = function () {
 
-                        var $win        =   $(window),
-                            end_zone    =   $('footer').offset().top - $win.height();
+                options = _.extend({}, options, $section.data());
 
-                        options = _.extend({}, options, $section.data());
+                $win.scroll(function() {
 
-                        $win.scroll(function(){
+                  console.log($win.scrollTop());
 
-                            if( !requesting && end_zone < $win.scrollTop() ) {
+                    if( !requesting && end_zone < $win.scrollTop() ) {
 
-                                if (blog_page > total){
+                      if (pageNum > total) return false;
 
-                                    return false;
+                      requesting = true;
 
-                                } else {
+                      makeRequest(pageNum);
 
-                                    requesting = true;
+                      ++pageNum;
 
-                                    makeRequest(blog_page);
+                    }
 
-                                    ++blog_page;
+                });
 
-                                }
+              };
 
-                            }
+            init();
 
-                        });
-
-                    };
-
-                init();
-            });
+          });
 
         },
 

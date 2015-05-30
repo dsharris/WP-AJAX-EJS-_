@@ -2,16 +2,13 @@
 
     <article>
 
-        <h3> <%= post.title %> </h3>
-
-        <span> <%= new Date(post.date).toString() %> </span>
+        <h3> <%= post.post_title %> </h3>
 
         <br />
         <br />
 
-        <p>
-            <%= post.content %>
-        </p>
+        <p><%= post.post_content %></p>
+
     </article>
 
 <% }) %>
