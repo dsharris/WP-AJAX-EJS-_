@@ -1,14 +1,10 @@
 <% _.each(posts, function (post) { %>
 
-    <article>
+  <article>
 
-        <h3> <%= post.post_title %> </h3>
+    <h2><%= post.title %></h2>
+    <p><%= post.content %></p>
 
-        <br />
-        <br />
-
-        <p><%= post.post_content %></p>
-
-    </article>
+  </article>
 
 <% }) %>
